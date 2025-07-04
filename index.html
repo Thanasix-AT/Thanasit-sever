@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sever</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>เครื่องแม่ข่าย</h1>
+    </header>
+
+    <div class="container">
+        <div class="content-block">
+            <h2>การตั้งค่าเว็บเซิร์ฟเวอร์</h2>
+            <img src="image/sever.png" alt="Web Server">
+            <p>
+                เว็บเซิร์ฟเวอร์เป็นโครงสร้างพื้นฐานของอินเทอร์เน็ต ทำหน้าที่จัดการคำขอ HTTP และให้บริการเนื้อหาเว็บไซต์แก่ผู้ใช้งาน 
+                เว็บเซิร์ฟเวอร์สมัยใหม่ เช่น Apache, Nginx และ Node.js ให้โซลูชันที่มีประสิทธิภาพสูงสำหรับการโฮสต์เว็บไซต์และเว็บแอปพลิเคชัน
+            </p>
+            <div class="example-box">
+                <h3>ตัวอย่างการตั้งค่า:</h3>
+                <code>
+                    server {<br>
+                    &nbsp;&nbsp;listen 80;<br>
+                    &nbsp;&nbsp;server_name example.com;<br>
+                    &nbsp;&nbsp;root /var/www/html;<br>
+                    &nbsp;&nbsp;index index.html;<br>
+                    }
+                </code>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>การจัดการฐานข้อมูลเซิร์ฟเวอร์</h2>
+            <img src="image/datasever.jpg" alt="Database Server">
+            <p>
+                เซิร์ฟเวอร์ฐานข้อมูลมีหน้าที่เก็บและจัดการข้อมูลของแอปพลิเคชัน ให้การเข้าถึงอย่างปลอดภัยและมีประสิทธิภาพ  
+                โซลูชันยอดนิยม ได้แก่ MySQL, PostgreSQL และ MongoDB ซึ่งแต่ละตัวมีจุดเด่นเฉพาะและเหมาะกับกรณีการใช้งานที่แตกต่างกัน
+            </p>
+            <div class="example-box">
+                <h3>ตัวอย่างคำสั่ง SQL:</h3>
+                <code>
+                    SELECT users.name, orders.total<br>
+                    FROM users<br>
+                    JOIN orders ON users.id = orders.user_id<br>
+                    WHERE orders.date >= '2024-01-01'<br>
+                    ORDER BY orders.total DESC;
+                </code>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>โครงสร้างพื้นฐานระบบคลาวด์</h2>
+            <img src="image/cloud infrastructure.jpg" alt="Cloud Infrastructure">
+            <p>
+                โครงสร้างพื้นฐานระบบคลาวด์ให้ทรัพยากรการประมวลผลที่ปรับขนาดได้ตามต้องการ  
+                ช่วยให้องค์กรสามารถนำแอปพลิเคชันขึ้นระบบโดยไม่ต้องดูแลฮาร์ดแวร์  
+                บริการยอดนิยม เช่น AWS, Google Cloud และ Azure ให้โซลูชันครบวงจรด้านการโฮสต์ การจัดเก็บ และเครือข่าย
+            </p>
+            <div class="example-box">
+                <h3>ตัวอย่างการนำขึ้นระบบ:</h3>
+                <code>
+                    # ส่งขึ้นระบบคลาวด์<br>
+                    docker build -t myapp .<br>
+                    docker push registry.cloud.com/myapp<br>
+                    kubectl apply -f deployment.yaml<br>
+                    kubectl expose deployment myapp --port=80
+                </code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
